@@ -1,8 +1,8 @@
 .navigation {
   grid-column: 1/2;
   grid-row: 1/-1;
-  height: 100vh;
-  width: max-content;
+  max-height: 100vh;  
+  width: max-content;  
   border: 1px solid $border-primary;
   font-size: 1.3rem;
   text-transform: capitalize;
@@ -57,14 +57,14 @@
         visibility: hidden;
       }
       gap: 0rem;
-      .sub-li-drop{
-        visibility: hidden;         
+      .sub-li-drop {
+        visibility: hidden;
       }
     }
     .nav-close-logo {
       visibility: visible;
     }
-    transform: translateX(-70%);
+    transform: translateX(-70%);        
     .nav-close-icon {
       opacity: 1;
       transition: all 0.3s;
@@ -152,7 +152,7 @@
         height: 2rem;
         width: 2rem;
         transition: transform 0.6s;
-        color: $grey-light-2;
+        color: $grey-light-2;    
         transition: color 0.5s;
         &:hover {
           color: black;
@@ -160,7 +160,7 @@
       }
     }
   }
-  &__top-activities {
+  &__top-activities { 
     list-style: none;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -177,7 +177,7 @@
         border-radius: 8px;
       }
       @include response(s-2-phone) {
-        border-radius: 6px;               
+        border-radius: 6px;
       }
       &::after {
         content: "12";
@@ -323,14 +323,14 @@
         .open-nav-items {
           display: flex;
           align-items: center;
-          gap:1rem; 
-          // justify-content: space-between;  
+          gap: 1rem;
+          // justify-content: space-between;
           @include response(s-2-phone) {
             gap: 5px;
             font-size: 1.2rem;
           }
-        }     
-        .nav-close-btn {      
+        }
+        .nav-close-btn {
           background-color: transparent;
           border: none;
           display: none;

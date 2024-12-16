@@ -30,21 +30,73 @@ body {
   grid-template-rows: auto minmax(0, 1fr);
   background-color: $bg-primary;
   &:has(.navigation > div > input[type="checkbox"]:checked) {
-    grid-template-columns: 4.5rem 1fr;
-    > header,     
-    > main{      
-      padding-left:2rem;
-    }     
-    @include response(s-2-phone) {
-      grid-template-columns: 30px 1fr;
-    }
-    @include response(s-3-phone) {
-      > header,
-      > main {
-        padding-left: 1rem;
-      }  
-    }
-  }      
+    // grid-template-columns: 4.5rem 1fr;
+    grid-template-columns: 32px 1fr;
+    // > header,    
+    // > main {
+    //   padding-left: 2rem;
+    // }
+  }
   transition: all 0.4s 0.2s;
+  @include response(s-2-phone) {
+    grid-template-columns: 32px 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
+    > main {
+      grid-column: 1/-1;
+    }
+    > header {
+      grid-column: 2/-1;
+    }
+  }
+  &:has(.navigation > div > input[type="checkbox"]) {
+    @include response(s-2-phone) {
+      > .navigation {
+        background-image: linear-gradient(
+          to bottom,
+          $blue-gradient 20%,
+          $nav-gradient-pink 80%
+        );
+        height: 100%;
+        .navigation__top-activities,
+        .navigation__links {
+          transform: translateX(0%);
+          display: block;
+          border-right: none;
+          .nav-close-btn {
+            visibility: hidden;
+          }
+        }
+        .navigation__links {
+          display: flex;
+        }
+      }
+      > header {
+        padding-left: 0px;
+      }
+    }
+  }
+  &:has(.navigation > div > input[type="checkbox"]:checked) {
+    @include response(s-2-phone) {
+      > .navigation {
+        background-image: linear-gradient(
+          to bottom,
+          $bg-primary 50%,
+          $bg-primary 50%
+        );
+        border: none;
+        height: 13%;
+        .navigation__top-activities,
+        .navigation__links {
+          transition: transform 0.5s;
+          display: none;
+          transform: translateX(-200%);
+        }
+      }
+      > header {
+        // grid-column: 2/-1;
+        // grid-row: 1/2;
+        padding-left: 0px;
+      }
+    }
+  }
 }
-               
