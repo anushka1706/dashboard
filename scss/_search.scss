@@ -1,0 +1,94 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex-basis: 70%;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid transparent;
+  @include response(s-tab-port) {
+    flex-basis: 50%;
+  }
+  @include response(phone) {
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+    width: 70%;
+  }
+  @include response(s-3-phone) {
+    width: 100%;
+  }
+  &:has(.search:focus) {
+    border: 2px solid rgb(241, 205, 211);
+  }
+  .search-btn {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 4px;     
+    padding: 3px 1rem;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    transform: translateY(6px) translateX(-8px);
+    @include response(phone) {
+      transform: translateY(6px) translateX(-6px);
+    }
+    @include response(s-2-phone) {
+      font-size: 1.3rem;
+      transform: translateY(4px) translateX(-5px);
+      padding: 4px 1rem;         
+      border-radius: 4px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    .search-k {
+      font-weight: 500;
+    }
+  }
+  .search {
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    // height: calc(100% + 20px);
+    height: 33px;
+    overflow: hidden;
+    padding: 1rem;
+    background-color: #fcfcfb;
+    padding-left: 3rem;
+    background-image: linear-gradient(to right, white 40%, #faf3f7c3 70%);
+    &::placeholder {
+      color: #48494b;
+      text-transform: capitalize;
+      font-weight: 500;
+      @include response(s-2-phone) {
+        transform: translateX(3px) translateY(-1px);
+      }
+    }
+    &:focus {
+      outline: none;
+    }
+    @include response(tab-port) {
+      font-size: 1rem;
+    }
+    @include response(s-2-tab-port) {
+      font-size: 1.3rem;
+    }
+    @include response(s-2-phone) {
+      height: 28px;
+      border-radius: 5px;
+    }
+  }
+  .search-icon {
+    font-size: 1.5rem;
+    color: $grey-dark;
+    position: absolute;
+    top: 30%;
+    transform: translateX(50%);
+    @include response(s-2-phone) {
+      transform: translateX(8px);
+    }
+  }
+}

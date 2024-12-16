@@ -1,0 +1,805 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__greet">
+        <span class="welcome">welcome ,</span>
+        <span class="header-user-name">brooklyn simmons</span>
+      </div>
+      <div class="search-bar">
+        <ion-icon class="search-icon" name="search-outline"></ion-icon>
+        <input
+          id="search"
+          class="search"
+          type="text"
+          placeholder="find something"
+        />
+       <button class="search-btn"><ion-icon class="seach-k" name="flower-outline"></ion-icon><span class="search-k">K</span></button> 
+      </div>
+      <section class="header__options">
+        <ion-icon class="help" name="help-outline"></ion-icon>
+        <ion-icon class="notification" name="notifications-outline"></ion-icon>
+      </section>
+    </header>
+    <nav class="navigation">
+      <div class="navigation__heading">
+        <div class="name-logo">
+          <img class="logo-main" src="img/logo.jpg" alt="weihu logo" />
+          <span class="name">weihu</span>
+        </div>
+        <input id="nav-check" class="nav-check" type="checkbox" />
+        <label for="nav-check" class="nav-label"
+          ><ion-icon class="nav-open-icon" name="enter-outline"></ion-icon>
+        </label>
+        <button class="nav-close-logo"><img class="close-nav-logo-img" src="img/logo.jpg" alt=""></button>
+      </div>
+      <ul class="navigation__top-activities">
+        <li class="nav-li link-task">
+          <div class="open-nav-items">
+            <ion-icon class="nav-icon" name="checkmark-circle-outline"></ion-icon
+            ><a href="#" class="link-name">tasks</a>
+          </div><button class="nav-close-btn">
+            <ion-icon class="nav-close-icon" name="checkmark-circle-outline"></ion-icon
+              >
+          </button>
+        </li>
+        <li class="nav-li">
+          <div class="open-nav-items">
+            <ion-icon class="nav-icon" name="flash-outline"></ion-icon><a href="#" class="link-name">activities</a>
+          </div><button class="nav-close-btn">
+            <ion-icon class="nav-close-icon" name="flash-outline"></ion-icon>
+          </button>
+        </li>
+      </ul>
+      <div class="navigation__links">
+        <ul class="nav-ul main">
+          <span class="nav-category-name">main</span>
+          <li class="nav-li">
+            <div class="open-nav-items">
+              <ion-icon class="nav-icon" name="grid-outline"></ion-icon
+              ><a href="#" class="link-name">dashboard</a>
+            </div><button class="nav-close-btn">
+              <ion-icon class="nav-close-icon" name="grid-outline"></ion-icon> 
+            </button>
+          </li>
+          <li class="nav-li">
+            <div class="open-nav-items">
+              <ion-icon class="nav-icon" name="calendar-outline"></ion-icon
+              ><a href="#" class="link-name">schedule</a>
+            </div> <button class="nav-close-btn">
+              <ion-icon class="nav-close-icon" name="calendar-outline"></ion-icon
+                >
+            </button>
+          </li>
+          <li class="nav-li">
+            <div class="open-nav-items">
+              <ion-icon class="nav-icon" name="create-outline"></ion-icon
+              ><a href="#" class="link-name">note</a>
+            </div><button class="nav-close-btn">
+              <ion-icon class="nav-close-icon" name="create-outline"></ion-icon
+                >
+            </button>
+          </li>
+          <li class="nav-li">
+            <div class="open-nav-items">
+              <ion-icon class="nav-icon" name="file-tray-outline"></ion-icon
+              ><a href="#" class="link-name">products</a>
+            </div><button class="nav-close-btn">
+              <ion-icon class="nav-close-icon" name="file-tray-outline"></ion-icon
+                >
+            </button>
+          </li>
+          <li class="nav-li">
+            <div class="open-nav-items">
+              <ion-icon class="nav-icon" name="stats-chart-outline"></ion-icon
+              ><a href="#" class="link-name">report</a>
+            </div><button class="nav-close-btn">
+              <ion-icon class="nav-close-icon" name="stats-chart-outline">
+            </button>
+        </ul>
+        <ul class="nav-ul records">
+          <span class="nav-category-name">records</span>
+          <li class="nav-li">
+            <div class="open-nav-items">
+              <ion-icon class="nav-icon" name="people-outline"></ion-icon
+              ><a href="#" class="link-name">teams</a>
+            <div class="sub-li-drop"><ion-icon class="drop" name="chevron-down-outline"></div></ion-icon></div><button class="nav-close-btn">
+              <ion-icon class="nav-close-icon" name="people-outline">
+            </button>
+          </li>
+          <li class="nav-li">
+            <div class="open-nav-items">
+              <ion-icon class="nav-icon" name="radio-button-off-outline"></ion-icon
+              ><a href="#" class="link-name">clients</a>
+            </div><button class="nav-close-btn">
+              <ion-icon class="nav-close-icon" name="radio-button-off-outline"></ion-icon
+                >
+            </button>
+          </li>
+        </ul>
+        <ul class="nav-ul help">
+          <li class="nav-li">
+            <div class="open-nav-items">
+              <ion-icon class="nav-icon" name="settings-outline"></ion-icon
+              ><a href="#" class="link-name">settings</a>
+            </div><button class="nav-close-btn">
+              <ion-icon class="nav-close-icon" name="settings-outline"></ion-icon
+                >
+            </button>
+          </li>
+          <li class="nav-li">
+            <div class="open-nav-items">
+              <ion-icon class="nav-icon" name="headset-outline"></ion-icon
+              ><a href="#" class="link-name">support</a>
+            </div><button class="nav-close-btn">
+              <ion-icon class="nav-close-icon" name="headset-outline"></ion-icon
+                >
+            </button>
+          </li>
+        </ul>
+        <button class="nav-user-btn">
+            <img src="img/client-4.jpg" alt="" class="nav-user-img" />
+            <span class="nav-user-name">brooklyn simmons</span>
+            <span class="nav-user-email">simmons@gmail.com</span>
+            <span class="right-arr-btn">&rarr;</span>
+        </button>
+        <button href="#" class="close-nav-user-btn"> <img class="close-nav-img" src="img/client-4.jpg" alt="" class="nav-user-img" /></button>
+      </div>
+    </nav>
+    <main>
+      <section class="dashboard-info">
+        <div class="dashboard-info__date">
+          <span class="month">may</span>
+          <span class="current-date-day">today is saturday, jul 9th 2024</span>
+        </div>
+        <div class="dashboard-info__daily-tasks">
+          <label for="tasks" class="daily-task-heading">board - </label>
+          <select class="task-select" name="tasks" id="tasks">
+            <option class="task-select-opt" value="daily-tasks">
+              daily tasks
+            </option>
+            <option class="task-select-opt" value="daily-tasks">
+              Daily tasks
+            </option>
+            <option class="task-select-opt" value="daily-tasks">
+              Daily tasks
+            </option>
+          </select>
+          <div class="users-tasks-imgs">
+            <img src="img/client-7.jpg" alt="" class="tasks-select-img" /><img
+              src=""
+              alt=""
+              class="ttasks-select-img"
+            /><img src="img/client-6.jpg" alt="" class="tasks-select-img" /><img
+              src=""
+              alt=""
+              class="tasks-img"
+            /><img src="img/client-6.jpg" alt="" class="tasks-select-img" /><img
+            src=""
+            alt=""
+            class="tasks-img"
+          /><img src="img/client-8.jpg" alt="" class="tasks-select-img" /><img
+          src=""
+          alt=""
+          class="tasks-img"
+        /><img src="img/client-7.jpg" alt="" class="tasks-select-img" />
+          </div>
+        </div>
+        <div class="dashboard-info__opts">
+          <button class="filters">
+            <ion-icon class="filter-icon" name="filter-outline"></ion-icon
+            ><span>filters</span>
+          </button>
+          <button class="create-task">
+            <span>&#43;</span><span>create task</span>
+          </button>
+        </div>
+      </section>
+      <section class="tasks-categories">
+        <div class="tasks-categories__states to-do">
+          <div class="state-heading">
+            <span class="task-state-name">todo list</span>
+            <div class="task-opts">
+              <button class="add-task">&#43;</button>
+              <button class="task-more-opts">&#8942;</button>
+            </div>
+          </div>
+          <div class="tasks-categories__states__all-cards">
+            <div class="task-card card-blue">
+              <div class="task-card-heading">
+                <div>
+                  <span class="task-type">#website</span>
+                  <span class="task-type">#client</span>
+                </div>
+                <button class="card-opts">&#8942;</button>
+              </div>
+              <h5 class="task-name">search inspiration for upcoming project</h5>
+              <span class="task-note"
+                >note: they like our behance project <b>mise</b></span
+              >
+              <div class="task-progress">
+                <label class="progress-label">progress</label>
+                <span class="progress-percent">40%</span>
+                <div class="progress-bar filled-40">
+                  <div class="circle-bar c-1"></div>
+                  <div class="circle-bar c-2"></div>
+                  <div class="circle-bar c-3"></div>
+                  <div class="circle-bar c-4"></div>
+                  <div class="circle-bar c-5"></div>
+                  <div class="circle-bar c-6"></div>
+                  <div class="circle-bar c-7"></div>
+                  <div class="circle-bar c-8"></div>
+                  <div class="circle-bar c-9"></div>
+                  <div class="circle-bar c-10"></div>
+                  <div class="circle-bar c-11"></div>
+                  <div class="circle-bar c-12"></div>
+                  <div class="circle-bar c-13"></div>
+                </div>
+              </div>
+              <div class="task-clients">
+                <div class="task-clients-profile">
+                  <img
+                    src="img/client-1.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-5.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-2.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-3.jpg"
+                    alt=""
+                    class="task-client-img"
+                  />
+                </div>
+                <div class="task-clients-activities">
+                  <button class="task-comments">
+                    <ion-icon
+                      class="comments-icon"
+                      name="chatbox-outline"
+                    ></ion-icon
+                    ><span class="comments-number">12</span>
+                  </button>
+                  <button class="task-attach">
+                    <ion-icon
+                      class="attach-icon"
+                      name="attach-outline"
+                    ></ion-icon
+                    ><span class="attach-number">8</span>
+                  </button>
+                </div>
+              </div>
+            </div>           
+            <div class="task-card card-purple">
+              <div class="task-card-heading">
+                <div>
+                  <span class="task-type">#mobile app</span>
+                  <span class="task-type">#client</span>
+                </div>
+                <button class="card-opts">&#8942;</button>
+              </div>
+              <h5 class="task-name">ginko mobile app design</h5>
+              <ul class="checklist">
+                <li class="checklist-li"><div class="tick-mark"></div><span>create user flow</span></li>
+                <li class="checklist-li"><div class="tick-mark"></div><span>make wireframe</span></li>
+                <li class="checklist-li">
+                  <div class="tick-mark"></div><span>design onboarding screens</span>
+                </li>
+                <li class="checklist-li"><div class="tick-mark"></div><span>make prototypes</span></li>
+              </ul>
+              <div class="tick-mark"></div><span class="task-note"
+                >note:we have a meeting at <b>2:34pm</b></span
+              >
+              <div class="task-progress">
+                <label class="progress-label">progress</label>
+                <span class="progress-percent">15%</span>
+                <div class="progress-bar filled-15">
+                  <div class="circle-bar c-1"></div>
+                  <div class="circle-bar c-2"></div>
+                  <div class="circle-bar c-3"></div>
+                  <div class="circle-bar c-4"></div>
+                  <div class="circle-bar c-5"></div>
+                  <div class="circle-bar c-6"></div>
+                  <div class="circle-bar c-7"></div>
+                  <div class="circle-bar c-8"></div>
+                  <div class="circle-bar c-9"></div>
+                  <div class="circle-bar c-10"></div>
+                  <div class="circle-bar c-11"></div>
+                  <div class="circle-bar c-12"></div>
+                  <div class="circle-bar c-13"></div>
+                </div>
+              </div>
+              <div class="task-clients">
+                <div class="task-clients-profile">
+                  <img
+                    src="img/client-1.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-5.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-2.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-3.jpg"
+                    alt=""
+                    class="task-client-img"
+                  />
+                </div>
+                <div class="task-clients-activities">
+                  <button class="task-comments">
+                    <ion-icon
+                      class="comments-icon"
+                      name="chatbox-outline"
+                    ></ion-icon
+                    ><span class="comments-number">7</span>
+                  </button>
+                  <button class="task-attach">
+                    <ion-icon
+                      class="attach-icon"
+                      name="attach-outline"
+                    ></ion-icon
+                    ><span class="attach-number">2</span>
+                  </button>
+                </div>
+              </div>
+            </div>  
+          </div>
+        </div>
+        <div class="tasks-categories__states in-progress">
+          <div class="state-heading">
+            <span class="task-state-name">in progress</span>
+            <div class="task-opts">
+              <button class="add-task">&#43;</button>
+              <button class="task-more-opts">&#8942;</button>
+            </div>
+          </div>
+          <div class="tasks-categories__states__all-cards">
+            <div class="task-card card-orange">
+              <div class="task-card-heading">
+                <div>
+                  <span class="task-type">#dribble shot</span>
+                  <span class="task-type">#product</span>
+                </div>
+                <button class="card-opts">&#8942;</button>
+              </div>
+              <h5 class="task-name">
+                wehiu product task and the task process pages
+              </h5>
+              <figure class="task-snap">
+                <img class="task-snap-img" src="img/dsgn.png" alt="">
+                <figcaption class="fig-cap">have to finish this before weekend</figcaption>    
+              </figure>
+              <div class="task-progress">
+                <label class="progress-label">progress</label>
+                <span class="progress-percent">90%</span>
+                <div class="progress-bar filled-90">
+                  <div class="circle-bar c-1"></div>
+                  <div class="circle-bar c-2"></div>
+                  <div class="circle-bar c-3"></div>
+                  <div class="circle-bar c-4"></div>
+                  <div class="circle-bar c-5"></div>
+                  <div class="circle-bar c-6"></div>
+                  <div class="circle-bar c-7"></div>
+                  <div class="circle-bar c-8"></div>
+                  <div class="circle-bar c-9"></div>
+                  <div class="circle-bar c-10"></div>
+                  <div class="circle-bar c-11"></div>
+                  <div class="circle-bar c-12"></div>
+                  <div class="circle-bar c-13"></div>
+                </div>
+              </div>
+              <div class="task-clients">
+                <div class="task-clients-profile">
+                  <img
+                    src="img/client-1.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-5.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-2.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-3.jpg"
+                    alt=""
+                    class="task-client-img"
+                  />
+                </div>
+                <div class="task-clients-activities">
+                  <button class="task-comments">
+                    <ion-icon
+                      class="comments-icon"
+                      name="chatbox-outline"
+                    ></ion-icon
+                    ><span class="comments-number">6</span>
+                  </button>
+                  <button class="task-attach">
+                    <ion-icon
+                      class="attach-icon"
+                      name="attach-outline"
+                    ></ion-icon
+                    ><span class="attach-number">1</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="task-card card-green">
+              <div class="task-card-heading">
+                <div>
+                  <span class="task-type">#products</span>
+                  <span class="task-type">#client</span>
+                </div>
+                <button class="card-opts">&#8942;</button>
+              </div>
+              <h5 class="task-name">
+               design CRM shop product page responsive website
+              </h5>
+              <div class="task-progress">
+                <label class="progress-label">progress</label>
+                <span class="progress-percent">40%</span>
+                <div class="progress-bar filled-40">
+                  <div class="circle-bar c-1"></div>
+                  <div class="circle-bar c-2"></div>
+                  <div class="circle-bar c-3"></div>
+                  <div class="circle-bar c-4"></div>
+                  <div class="circle-bar c-5"></div>
+                  <div class="circle-bar c-6"></div>
+                  <div class="circle-bar c-7"></div>
+                  <div class="circle-bar c-8"></div>
+                  <div class="circle-bar c-9"></div>
+                  <div class="circle-bar c-10"></div>
+                  <div class="circle-bar c-11"></div>
+                  <div class="circle-bar c-12"></div>
+                  <div class="circle-bar c-13"></div>
+                </div>
+              </div>
+              <div class="task-clients">
+                <div class="task-clients-profile">
+                  <img
+                    src="img/client-1.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-5.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-2.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-3.jpg"
+                    alt=""
+                    class="task-client-img"
+                  />
+                </div>
+                <div class="task-clients-activities">
+                  <button class="task-comments">
+                    <ion-icon
+                      class="comments-icon"
+                      name="chatbox-outline"
+                    ></ion-icon
+                    ><span class="comments-number">12</span>
+                  </button>
+                  <button class="task-attach">
+                    <ion-icon
+                      class="attach-icon"
+                      name="attach-outline"
+                    ></ion-icon
+                    ><span class="attach-number">8</span>
+                  </button> 
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+        <div class="tasks-categories__states in-review">
+          <div class="state-heading">
+            <span class="task-state-name">in review</span>
+            <div class="task-opts">
+              <button class="add-task">&#43;</button>
+              <button class="task-more-opts">&#8942;</button>
+            </div>
+          </div>
+          <div class="tasks-categories__states__all-cards">
+            <div class="task-card card-pink">
+              <div class="task-card-heading">
+                <div>
+                  <span class="task-type">#development</span>
+                  <span class="task-type">#client</span>
+                </div>
+                <button class="card-opts">&#8942;</button>
+              </div>
+              <h5 class="task-name">
+               orypto product landing page create in webflow
+              </h5>
+              <div class="task-clients">
+                <div class="task-clients-profile">
+                  <img
+                    src="img/client-1.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-5.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-2.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-3.jpg"
+                    alt=""
+                    class="task-client-img"
+                  />
+                </div>
+                <div class="task-clients-activities">
+                  <button class="task-comments">
+                    <ion-icon
+                      class="comments-icon"
+                      name="chatbox-outline"
+                    ></ion-icon
+                    ><span class="comments-number">6</span>
+                  </button>
+                  <button class="task-attach">
+                    <ion-icon
+                      class="attach-icon"
+                      name="attach-outline"
+                    ></ion-icon
+                    ><span class="attach-number">1</span>
+                  </button>
+                </div>
+              </div>
+            </div>    
+            <div class="task-card card-violet-light">
+              <div class="task-card-heading">
+                <div>
+                  <span class="task-type">#product</span>
+                  <span class="task-type">#client</span>
+                </div>
+                <button class="card-opts">&#8942;</button>
+              </div>
+              <h5 class="task-name">
+              natverk video platform web app design and develop
+              </h5>
+              <div class="task-clients">
+                <div class="task-clients-profile">
+                  <img
+                    src="img/client-1.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-5.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-2.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-3.jpg"
+                    alt=""
+                    class="task-client-img"
+                  />
+                </div>
+                <div class="task-clients-activities">
+                  <button class="task-comments">
+                    <ion-icon
+                      class="comments-icon"
+                      name="chatbox-outline"
+                    ></ion-icon
+                    ><span class="comments-number">6</span>
+                  </button>
+                  <button class="task-attach">
+                    <ion-icon
+                      class="attach-icon"
+                      name="attach-outline"
+                    ></ion-icon
+                    ><span class="attach-number">1</span>
+                  </button>
+                </div>
+              </div>
+            </div> 
+            <div class="task-card card-orange-light">
+              <div class="task-card-heading">
+                <div>
+                  <span class="task-type">#website</span>
+                  <span class="task-type">#client</span>
+                </div>
+                <button class="card-opts">&#8942;</button>
+              </div>
+              <h5 class="task-name">
+               resdesign grab website landing and login pages
+              </h5>
+              <div class="task-clients">
+                <div class="task-clients-profile">
+                  <img
+                    src="img/client-1.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-5.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-2.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-3.jpg"
+                    alt=""
+                    class="task-client-img"
+                  />
+                </div>
+                <div class="task-clients-activities">
+                  <button class="task-comments">
+                    <ion-icon
+                      class="comments-icon"
+                      name="chatbox-outline"
+                    ></ion-icon
+                    ><span class="comments-number">6</span>
+                  </button>
+                  <button class="task-attach">
+                    <ion-icon
+                      class="attach-icon"
+                      name="attach-outline"
+                    ></ion-icon
+                    ><span class="attach-number">1</span>
+                  </button>
+                </div>
+              </div>
+            </div>      
+           
+          </div>
+        </div>
+        <div class="tasks-categories__states done">
+          <div class="state-heading">
+            <span class="task-state-name">done</span>
+            <div class="task-opts">
+              <button class="add-task">&#43;</button>
+              <button class="task-more-opts">&#8942;</button>
+            </div>
+          </div>
+          <div class="tasks-categories__states__all-cards">
+            <div class="task-card card-cyan">
+              <div class="task-card-heading">
+                <div>
+                  <span class="task-type">#mobile app</span>
+                  <span class="task-type">#client</span>
+                </div>
+                <button class="card-opts">&#8942;</button>
+              </div>
+              <h5 class="task-name">
+               affitto product full service
+              </h5>
+              <ul class="checklist">
+                <li class="checklist-li"><div class="tick-mark"></div><span>branding</span></li>
+                <li class="checklist-li"><div class="tick-mark"></div><span>mobile app design & development</span></li>
+                <li class="checklist-li">
+                  <div class="tick-mark"></div><span>landing page design & development</span>
+                </li>
+                <li class="checklist-li"><div class="tick-mark"></div><span>dashboard design & development</span></li>
+                <li class="checklist-li"><div class="tick-mark"></div><span>marketing</span></li>
+              </ul>
+              <div class="task-clients">
+                <div class="task-clients-profile">
+                  <img
+                    src="img/client-1.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-5.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-2.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-3.jpg"
+                    alt=""
+                    class="task-client-img"
+                  />
+                </div>
+                <div class="task-clients-activities">
+                  <button class="task-comments">
+                    <ion-icon
+                      class="comments-icon"
+                      name="chatbox-outline"
+                    ></ion-icon
+                    ><span class="comments-number">12</span>
+                  </button>
+                  <button class="task-attach">
+                    <ion-icon
+                      class="attach-icon"
+                      name="attach-outline"
+                    ></ion-icon
+                    ><span class="attach-number">8</span>
+                  </button>
+                </div>
+              </div>
+            </div>   
+            <!-- <div class="task-card card-peach-dark">
+              <div class="task-card-heading">
+                <div>
+                  <span class="task-type">#products</span>
+                  <span class="task-type">#client</span>
+                </div>
+                <button class="card-opts">&#8942;</button>
+              </div>
+              <h5 class="task-name">
+              design moli app product page redesign
+              </h5>
+              <div class="task-clients">
+                <div class="task-clients-profile">
+                  <img
+                    src="img/client-1.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-5.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-2.jpg"
+                    alt=""
+                    class="task-client-img"
+                  /><img
+                    src="img/client-3.jpg"
+                    alt=""
+                    class="task-client-img"
+                  />
+                </div>
+                <div class="task-clients-activities">
+                  <button class="task-comments">
+                    <ion-icon
+                      class="comments-icon"
+                      name="chatbox-outline"
+                    ></ion-icon
+                    ><span class="comments-number">6</span>
+                  </button>
+                  <button class="task-attach">
+                    <ion-icon
+                      class="attach-icon"
+                      name="attach-outline"
+                    ></ion-icon
+                    ><span class="attach-number">8</span>
+                  </button>
+                </div>
+              </div>
+            </div>  -->
+        </section>
+      </div>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

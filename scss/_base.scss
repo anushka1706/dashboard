@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  @include response(tab-port) {
+    font-size: 55.7%;
+  }
+  @include response(s-tab-port) {
+    font-size: 50.7%;
+  }
+  @include response(s-laptop) {
+    font-size: 60%;
+  }
+  @include response(s-2-tab-port) {
+    font-size: 50.7%;
+  }
+  @include response(phone) {
+    font-size: 45.7%;
+  }
+}
+body {
+  font-family: "Poppins";
+  position: relative;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto minmax(0, 1fr);
+  background-color: $bg-primary;
+  &:has(.navigation > div > input[type="checkbox"]:checked) {
+    grid-template-columns: 4.5rem 1fr;
+    > header,     
+    > main{      
+      padding-left:2rem;
+    }     
+    @include response(s-2-phone) {
+      grid-template-columns: 30px 1fr;
+    }
+    @include response(s-3-phone) {
+      > header,
+      > main {
+        padding-left: 1rem;
+      }  
+    }
+  }      
+  transition: all 0.4s 0.2s;
+}
+               

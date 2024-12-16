@@ -1,0 +1,191 @@
+@mixin card-style(
+  $color,
+  $gradient,
+  $text,
+  $heading,
+  $progress-bg,
+  $bg-secondary
+) {
+  background-image: linear-gradient(to bottom, $color 20%, $gradient 70%);
+  .task-progress {
+    .progress-label,
+    .progress-percent {
+      color: $text;
+    }
+    .progress-bar {
+      .circle-bar {
+        background-color: $progress-bg;
+      }
+    }
+  }
+  .task-card-heading {
+    .task-type {
+      color: $heading;
+      background-color: $bg-secondary;
+      border: 1px solid darken($color, 5%);
+    }
+    .card-opts {
+      color: $heading;
+      border: 1px solid darken($color, 5%);
+      transition: all 0.4s;
+      &:hover {
+        background-color: darken($heading, 10%);
+        color: lighten($color, 20%);
+        cursor: pointer;
+      }
+    }
+  }
+  .task-note {
+    color: $text;
+  }
+  .task-progress {
+    .progress-bar.filled-40 {
+      .c-1,
+      .c-2,
+      .c-3,
+      .c-4,
+      .c-5 {
+        background-color: $heading;
+      }
+    }
+    .progress-bar.filled-15 {
+      .c-1 {
+        background-color: $heading;
+      }
+    }
+    .progress-bar.filled-90 {
+      .c-1,
+      .c-2,
+      .c-3,
+      .c-4,
+      .c-5,
+      .c-6,
+      .c-7,
+      .c-8,
+      .c-9,
+      .c-10,
+      .c-11,
+      .c-12 {
+        background-color: $heading;
+      }
+    }
+  }
+  .task-clients .task-clients-activities {
+    .task-attach,
+    .task-comments {
+      color: $text;
+      transition: all 0.4s;
+      &:hover {
+        background-color: darken($heading, 10%);
+        color: lighten($color, 20%);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .task-snap {
+    &-img {
+      border: 5px solid $progress-bg;
+      border-bottom: none;
+    }
+    .fig-cap {
+      margin-top: 8px;
+      text-transform: capitalize;
+      color: $text;
+    }
+  }
+  .checklist {
+    &-li {
+      color: $heading;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      .tick-mark {
+        height: 1.8rem;
+        width: 1.8rem;
+        background-color: $heading;
+        border-radius: 50%;
+        position: relative;
+        &::after {
+          content: "\2713";
+          color: white;
+          position: absolute;
+          font-size: 1rem;
+          left: 25%;
+          top: 10%;
+        }
+      }
+    }
+  }
+  .task-name {
+    color: $heading;
+    font-weight: 600;
+  }
+  .task-comments,
+  .task-attach {
+    border: 1px solid darken($color, 5%);
+  }
+}
+@mixin response($device) {
+  @if $device == phone {
+    @media (max-width: 770px) {
+      @content;
+    }
+  }
+  @if $device == large {
+    @media (min-width: 1450px) {
+      @content;
+    }
+  } @else if $device == s-phone {
+    @media (max-width: 610px) {
+      @content;
+    }
+  } @else if $device == s-2-phone {
+    @media (max-width: 535px) {
+      @content;
+    }
+  } @else if $device == s-3-phone {
+    @media (max-width: 460px) {
+      @content;
+    }
+  } @else if $device == s-4-phone {
+    @media (max-width: 370px) {
+      @content;
+    }
+  } @else if $device == s-5-phone {
+    @media (max-width: 370px) {
+      @content;
+    }
+  } @else if $device == tab-port {
+    @media (max-width: 1160px) {
+      @content;
+    }
+  } @else if $device == s-tab-port {
+    @media (max-width: 1020px) {
+      @content;
+    }
+  } @else if $device == s-tab-3-port {
+    @media (max-width: 860px) {
+      @content;
+    }
+  } @else if $device == s-2-tab-port {
+    @media (max-width: 920px) {
+      @content;
+    }
+  } @else if $device == laptop {
+    @media (max-width: 1360px) {
+      @content;
+    }
+  } @else if $device == s-laptop {
+    @media (max-width: 1260px) {
+      @content;
+    }
+  } @else if $device == s-2-laptop {
+    @media (max-width: 1230px) {
+      @content;
+    }
+  } @else if $device == l-laptop {
+    @media (max-width: 1400px) {
+      @content;
+    }
+  }
+}
