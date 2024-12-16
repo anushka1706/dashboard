@@ -1487,6 +1487,8 @@ main {
         background-color: transparent; }
       .navigation:has(div > input[type="checkbox"]:checked) .nav-li::after {
         visibility: hidden; }
+      .navigation:has(div > input[type="checkbox"]:checked) .nav-li .sub-li-drop {
+        visibility: hidden; }
     .navigation:has(div > input[type="checkbox"]:checked) .nav-close-logo {
       visibility: visible; }
     .navigation:has(div > input[type="checkbox"]:checked) .nav-close-icon {

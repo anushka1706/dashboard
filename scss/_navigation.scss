@@ -57,6 +57,9 @@
         visibility: hidden;
       }
       gap: 0rem;
+      .sub-li-drop{
+        visibility: hidden;         
+      }
     }
     .nav-close-logo {
       visibility: visible;
@@ -320,13 +323,14 @@
         .open-nav-items {
           display: flex;
           align-items: center;
-          gap: 1rem;
+          gap:1rem; 
+          // justify-content: space-between;  
           @include response(s-2-phone) {
             gap: 5px;
             font-size: 1.2rem;
           }
-        }
-        .nav-close-btn {
+        }     
+        .nav-close-btn {      
           background-color: transparent;
           border: none;
           display: none;
